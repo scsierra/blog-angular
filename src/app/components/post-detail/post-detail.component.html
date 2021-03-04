@@ -1,0 +1,9 @@
+<div class="loading" *ngIf="!post">
+    Cargando..
+</div>
+<div class="col-md-12" *ngIf="post">
+    <h1>{{post.title}}</h1>
+    <h3>{{post.category.name}} - Creado por: {{post.user.name}}</h3>
+    <hr>
+    <p [innerHtml]="post.content"></p>
+</div>
